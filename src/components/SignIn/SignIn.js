@@ -19,7 +19,7 @@ class SignIn extends React.Component {
 	}
 
 	onSubmitSignIn = () => {
-		fetch('http://localhost:3000/signin',{
+		fetch('https://fierce-escarpment-39395.herokuapp.com/signin',{
 			method:'post',
 			headers: {'Content-type': 'application/json'},
 			body: JSON.stringify({
@@ -36,6 +36,7 @@ class SignIn extends React.Component {
 					console.log(user)
 				}
 			})
+			.catch(err => console.log(err));
 	}
 
 	render(){
